@@ -12,7 +12,7 @@ public class TestConfiguration {
     private static TestConfiguration testConfiguration;
 
     private Properties properties;
-    private final String propertyFilePath= "\\resources\\TestConfiguration.properties";
+    private final String propertyFilePath= "src\\main\\resources\\TestConfiguration.properties";
 
 
     private TestConfiguration(){ ConfigFileReader(); }

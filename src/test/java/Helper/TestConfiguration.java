@@ -1,27 +1,32 @@
 package Helper;
 
+import Model.WebDrivers;
+
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Properties;
 
 public class TestConfiguration {
+    private static TestConfiguration testConfiguration;
 
-    private static Properties testConfiguration;
-    private final String propertyFilePath= "configs//Configuration.properties";
+    private Properties properties;
+    private final String propertyFilePath= "\\resources\\TestConfiguration.properties";
 
 
-    private TestConfiguration(){
-
-    }
+    private TestConfiguration(){ ConfigFileReader(); }
 
     public static TestConfiguration getTestConfiguration() {
         if (testConfiguration == null){
-            ConfigFileReader();
+            testConfiguration = new TestConfiguration();
         }
         return testConfiguration;
     }
 
-    public static void ConfigFileReader(){
+    public void ConfigFileReader(){
         BufferedReader reader;
+
         try {
             reader = new BufferedReader(new FileReader(propertyFilePath));
             properties = new Properties();
@@ -36,4 +41,11 @@ public class TestConfiguration {
             throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
         }
     }
+
+    public String getWedDriverPath(WebDrivers webDriver){
+
+        return properties.getProperty(webDriver.name());
+    }
+
+
 }

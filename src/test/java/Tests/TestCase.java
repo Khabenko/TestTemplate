@@ -1,6 +1,8 @@
 package Tests;
 
 import java.sql.DriverManager;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import Helper.WebDriverManager;
@@ -8,23 +10,30 @@ import Model.WebDrivers;
 import org.junit.*;
 import static org.junit.Assert.*;
 
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import ru.yandex.qatools.allure.annotations.*;
 
-
+@RunWith(Parameterized.class)
 public class TestCase{
     private WebDriver driver;
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
 
+    public TestCase(WebDrivers driver) {
+        this.driver = WebDriverManager.getWebDriver(driver);
+        this.driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    }
+
     @Before
     public void setUp() throws Exception {
 
-        System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
-        driver = WebDriverManager.getWebDriver(WebDrivers.ChromeDriverForWindows);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    //    System.setProperty("webdriver.chrome.driver", "src\\main\\resources\\chromedriver.exe");
+    //     driver = WebDriverManager.getWebDriver(WebDrivers.ChromeDriverForWindows);
+    //    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
     }
 
 
@@ -35,9 +44,6 @@ public class TestCase{
     @Test
     public void testCaseP1() throws Exception {
         driver.get("http://firstbridge.io/");
-
-
-
     }
 
 
@@ -81,5 +87,14 @@ public class TestCase{
         } finally {
             acceptNextAlert = true;
         }
+    }
+
+    @Parameterized.Parameters
+    public static List<Object[]> isEmptyData() {
+        return Arrays.asList(new Object[][] {
+                { WebDrivers.FireFoxDriverForWindows },
+                { WebDrivers.ChromeDriverForWindows },
+                { WebDrivers.OperaDriverForWindows }
+        });
     }
 }

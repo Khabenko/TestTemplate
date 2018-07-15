@@ -4,30 +4,38 @@ import Model.WebDrivers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
 
-import static Model.WebDrivers.ChromeDriverForWindows;
-import static Model.WebDrivers.FireFoxDriverForWindows;
-import static Model.WebDrivers.OperaDriverForWindows;
+import java.io.File;
+
 
 public class WebDriverManager {
     private static WebDriver webDriver;
+    private static OperaOptions options;
 
     public WebDriverManager() {
 
     }
 
     public static WebDriver getWebDriver(WebDrivers webDriverType) {
-        String path = TestConfiguration.getTestConfiguration().getWedDriverPath(webDriverType);
+        String wedDriverPath = TestConfiguration.getTestConfiguration().getWedDriverPath(webDriverType);
+      //  String operaPath = TestConfiguration.getTestConfiguration().getWedDriverPath("");
+
         switch (webDriverType)
         {
             case ChromeDriverForWindows:
-                System.setProperty("webdriver.chrome.driver", path);
+                System.setProperty("webdriver.chrome.driver", wedDriverPath);
                 webDriver = new ChromeDriver();
                 break;
             case OperaDriverForWindows:
+                options = new OperaOptions();
+                options.setBinary(new File("C:\\Program Files\\Opera\\54.0.2952.54\\opera.exe"));
+                System.setProperty("webdriver.opera.driver", wedDriverPath);
+                webDriver = new OperaDriver(options);
                 break;
             case FireFoxDriverForWindows:
-                System.setProperty("webdriver.gecko.driver", "src\\main\\resources\\WebDriver.Windows\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", wedDriverPath);
                 webDriver = new FirefoxDriver();
                 break;
             default:

@@ -1,0 +1,79 @@
+{
+  "uid" : "b09b1b771a9c095d",
+  "name" : "[Contact form] Checking the \"Name\" field  (Contain Name and surname)",
+  "fullName" : "Tests.TestCase.testCaseP1[2]",
+  "historyId" : "23488a3c77a341c41f909618af8a7d6a",
+  "time" : {
+    "start" : 1531662601097,
+    "stop" : 1531662606702,
+    "duration" : 5605
+  },
+  "status" : "passed",
+  "statusDetails" : {
+    "flaky" : true
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "[Contact form]"
+  }, {
+    "name" : "framework",
+    "value" : "JUnit"
+  }, {
+    "name" : "host",
+    "value" : "DESKTOP-8N2GC70"
+  }, {
+    "name" : "issue",
+    "value" : "Test-1"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "story",
+    "value" : "Positive"
+  }, {
+    "name" : "thread",
+    "value" : "16564@DESKTOP-8N2GC70.main(1)"
+  }, {
+    "name" : "suite",
+    "value" : "Tests.TestCase"
+  }, {
+    "name" : "testClass",
+    "value" : "Tests.TestCase"
+  }, {
+    "name" : "testMethod",
+    "value" : "testCaseP1[2]"
+  }, {
+    "name" : "package",
+    "value" : "Tests.TestCase"
+  } ],
+  "parameters" : [ ],
+  "links" : [ {
+    "name" : "Test-1",
+    "url" : "Test-1",
+    "type" : "issue"
+  } ],
+  "hidden" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "38b01dc6348688d9",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531662596396,
+        "stop" : 1531662599970,
+        "duration" : 3574
+      }
+    }, {
+      "uid" : "e9f8a94745b0c3e7",
+      "status" : "passed",
+      "time" : {
+        "start" : 1531662589758,
+        "stop" : 1531662594213,
+        "duration" : 4455
+      }
+    } ],
+    "categories" : [ ]
+  }
+}

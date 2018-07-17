@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1531662589740" stop="1531662606705" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Tests.TestCase</name>
+    <test-cases>
+        <test-case start="1531662589758" stop="1531662594213" status="passed">
+            <name>testCaseP1[0]</name>
+            <title>[Contact form] Checking the "Name" field  (Contain Name and surname)</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="issue" value="Test-1"/>
+                <label name="story" value="Positive"/>
+                <label name="feature" value="[Contact form]"/>
+                <label name="host" value="DESKTOP-8N2GC70"/>
+                <label name="thread" value="16564@DESKTOP-8N2GC70.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1531662596396" stop="1531662599970" status="passed">
+            <name>testCaseP1[1]</name>
+            <title>[Contact form] Checking the "Name" field  (Contain Name and surname)</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="issue" value="Test-1"/>
+                <label name="story" value="Positive"/>
+                <label name="feature" value="[Contact form]"/>
+                <label name="host" value="DESKTOP-8N2GC70"/>
+                <label name="thread" value="16564@DESKTOP-8N2GC70.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1531662601097" stop="1531662606702" status="passed">
+            <name>testCaseP1[2]</name>
+            <title>[Contact form] Checking the "Name" field  (Contain Name and surname)</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="issue" value="Test-1"/>
+                <label name="story" value="Positive"/>
+                <label name="feature" value="[Contact form]"/>
+                <label name="host" value="DESKTOP-8N2GC70"/>
+                <label name="thread" value="16564@DESKTOP-8N2GC70.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="JUnit"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,72 @@
+{
+  "statistic" : {
+    "failed" : 0,
+    "broken" : 0,
+    "skipped" : 0,
+    "passed" : 1,
+    "unknown" : 0,
+    "total" : 1
+  },
+  "time" : {
+    "minDuration" : 5605,
+    "maxDuration" : 5605,
+    "sumDuration" : 5605,
+    "start" : 1531662601097,
+    "stop" : 1531662606702,
+    "duration" : 5605
+  },
+  "children" : [ {
+    "uid" : "3fb25dca1afe48f9",
+    "name" : "[Contact form]",
+    "time" : {
+      "minDuration" : 5605,
+      "maxDuration" : 5605,
+      "sumDuration" : 5605,
+      "start" : 1531662601097,
+      "stop" : 1531662606702,
+      "duration" : 5605
+    },
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "type" : "TestGroupNode",
+    "children" : [ {
+      "uid" : "efd9a24ad82eb046",
+      "name" : "Positive",
+      "time" : {
+        "minDuration" : 5605,
+        "maxDuration" : 5605,
+        "sumDuration" : 5605,
+        "start" : 1531662601097,
+        "stop" : 1531662606702,
+        "duration" : 5605
+      },
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 1,
+        "unknown" : 0,
+        "total" : 1
+      },
+      "type" : "TestGroupNode",
+      "children" : [ {
+        "uid" : "b09b1b771a9c095d",
+        "name" : "[Contact form] Checking the \"Name\" field  (Contain Name and surname)",
+        "time" : {
+          "start" : 1531662601097,
+          "stop" : 1531662606702,
+          "duration" : 5605
+        },
+        "status" : "passed",
+        "flaky" : true,
+        "type" : "TestCaseNode"
+      } ]
+    } ]
+  } ]
+}

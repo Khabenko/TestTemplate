@@ -31,9 +31,8 @@ public class WebDriverManager {
             case OperaDriverForWindows:
                 options = new OperaOptions();
                 options.setBinary(new File("C:\\Program Files\\Opera\\54.0.2952.54\\opera.exe"));
-                System.out.printf(new File("C:\\Program Files\\Opera\\54.0.2952.54\\opera.exe").getAbsolutePath().toString());
                 System.setProperty("webdriver.opera.driver", wedDriverPath);
-                webDriver = new OperaDriver(options);
+                webDriver = new OperaDriver();
                 break;
             case FireFoxDriverForWindows:
                 System.setProperty("webdriver.gecko.driver", wedDriverPath);

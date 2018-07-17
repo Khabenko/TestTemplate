@@ -93,8 +93,7 @@ public class TestCase{
     public static List<Object[]> isEmptyData() {
         return Arrays.asList(new Object[][] {
                 { WebDrivers.FireFoxDriverForWindows },
-                { WebDrivers.ChromeDriverForWindows },
-                { WebDrivers.OperaDriverForWindows }
+                { WebDrivers.ChromeDriverForWindows }
         });
     }
 }

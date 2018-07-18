@@ -37,13 +37,16 @@ public class TestCase{
     }
 
 
-    @Title("[Contact form] Checking the \"Name\" field  (Contain Name and surname)")
+    @Title("[Login form] Checking the \"Name\" field  (Contain Name and surname)")
     @Features("[Contact form]")
     @Stories("Positive")
     @Issue("Test-1")
     @Test
     public void testCaseP1() throws Exception {
         driver.get("http://firstbridge.io/");
+        makeScreenshot();
+        driver.get("http://firstbridge.io/");
+
     }
 
 
@@ -89,12 +92,16 @@ public class TestCase{
         }
     }
 
+    @Attachment(type = "image/png")
+    public byte[] makeScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
     @Parameterized.Parameters
     public static List<Object[]> isEmptyData() {
         return Arrays.asList(new Object[][] {
                 { WebDrivers.FireFoxDriverForWindows },
-                { WebDrivers.ChromeDriverForWindows },
-                { WebDrivers.OperaDriverForWindows }
+                { WebDrivers.ChromeDriverForWindows }
         });
     }
 }

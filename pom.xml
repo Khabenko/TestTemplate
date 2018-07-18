@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>Test Template</groupId>
-    <artifactId>Test Template</artifactId>
+    <groupId>ApolloAutomationTests</groupId>
+    <artifactId>ApolloAutomationTests</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -39,8 +39,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
-                        -Dcucumber.options="--plugin ru.yandex.qatools.allure.cucumberjvm.AllureReporter"
-
+                        -Dcucumber.options="--plugin ru.yandex.qatools.allure.cucumberjvm.AllureReporter
                     </argLine>
                     <properties>
                         <property>

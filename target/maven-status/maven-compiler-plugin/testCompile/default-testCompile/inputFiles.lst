@@ -1,4 +1,12 @@
-C:\Work\QA\ApolloAutomationTests\src\test\java\Helper\TestConfiguration.java
-C:\Work\QA\ApolloAutomationTests\src\test\java\Model\WebDrivers.java
-C:\Work\QA\ApolloAutomationTests\src\test\java\Helper\WebDriverManager.java
-C:\Work\QA\ApolloAutomationTests\src\test\java\Tests\TestCase.java
+C:\Work\ApolloAutomationTests\src\test\java\Helper\WebDriverManager.java
+C:\Work\ApolloAutomationTests\src\test\java\Helper\TestHelper.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\API\Response\BlockchainTransactions.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\API\APIParameters.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\API\RequestType.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\PageFactory\LoginPage.java
+C:\Work\ApolloAutomationTests\src\test\java\Helper\TestConfiguration.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\WebDrivers.java
+C:\Work\ApolloAutomationTests\src\test\java\Tests\TestAPI.java
+C:\Work\ApolloAutomationTests\src\test\java\Tests\TestCase.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\Transaction.java
+C:\Work\ApolloAutomationTests\src\test\java\Model\Attachment.java

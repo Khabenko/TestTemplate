@@ -13,9 +13,12 @@ public class TestConfiguration {
 
     private Properties properties;
     private final String propertyFilePath= "src\\main\\resources\\TestConfiguration.properties";
+    private final String propertyTestEnvironmentKey = "TestEnvironment";
+    private final String propertyPublicKey = "PublicKey";
 
-
-    private TestConfiguration(){ ConfigFileReader(); }
+    private TestConfiguration(){
+        ConfigFileReader();
+    }
 
     public static TestConfiguration getTestConfiguration() {
         if (testConfiguration == null){
@@ -40,6 +43,14 @@ public class TestConfiguration {
             e.printStackTrace();
             throw new RuntimeException("Configuration.properties not found at " + propertyFilePath);
         }
+    }
+
+    public String getBaseURL() {
+        return properties.getProperty(propertyTestEnvironmentKey);
+    }
+
+    public String getPublicKey() {
+        return properties.getProperty(propertyPublicKey);
     }
 
     public String getWedDriverPath(WebDrivers webDriver){

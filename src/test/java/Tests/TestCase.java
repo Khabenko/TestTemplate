@@ -5,8 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import Helper.TestHelper;
 import Helper.WebDriverManager;
+import Model.API.Response.BlockchainTransactions;
 import Model.WebDrivers;
+import okhttp3.Request;
+import okhttp3.Response;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -43,9 +47,23 @@ public class TestCase{
     @Issue("Test-1")
     @Test
     public void testCaseP1() throws Exception {
+        /*
         driver.get("http://firstbridge.io/");
         makeScreenshot();
         driver.get("http://firstbridge.io/");
+        */
+
+
+        Request request = new Request.Builder()
+                .url("http://localhost:6876/apl?requestType=getPrivateBlockchainTransactions&publicKey=4652486ebc271520d844e5bdda9ac243c05dcbe7bc9b93807073a32177a6f73d")
+                .get()
+                .build();
+
+
+
+        Response response =  TestHelper.getClient().newCall(request).execute();
+        BlockchainTransactions blockchainTransactions = TestHelper.getGson().fromJson(response.body().string().toString(), BlockchainTransactions.class);
+
 
     }
 

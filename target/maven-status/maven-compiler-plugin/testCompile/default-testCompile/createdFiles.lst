@@ -1,5 +1,13 @@
 Helper\TestConfiguration.class
-Model\WebDrivers.class
-Helper\WebDriverManager.class
+Model\API\RequestType.class
+Model\PageFactory\LoginPage.class
 Tests\TestCase.class
 Helper\WebDriverManager$1.class
+Model\Attachment.class
+Model\API\Response\BlockchainTransactions.class
+Model\API\APIParameters.class
+Helper\TestHelper.class
+Model\Transaction.class
+Model\WebDrivers.class
+Helper\WebDriverManager.class
+Tests\TestAPI.class
